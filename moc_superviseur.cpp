@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Superviseur_t {
-    const uint offsetsAndSize[16];
-    char stringdata0[109];
+    const uint offsetsAndSize[18];
+    char stringdata0[122];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_Superviseur_t, stringdata0) + ofs), len 
@@ -34,14 +34,16 @@ QT_MOC_LITERAL(12, 14), // "recuperationDo"
 QT_MOC_LITERAL(27, 0), // ""
 QT_MOC_LITERAL(28, 11), // "lancerCycle"
 QT_MOC_LITERAL(40, 17), // "synchroniserRobot"
-QT_MOC_LITERAL(58, 16), // "recupererDOFanuc"
-QT_MOC_LITERAL(75, 18), // "recupererDOBraccio"
-QT_MOC_LITERAL(94, 14) // "envoyerDIFanuc"
+QT_MOC_LITERAL(58, 12), // "arreterCycle"
+QT_MOC_LITERAL(71, 16), // "recupererDOFanuc"
+QT_MOC_LITERAL(88, 18), // "recupererDOBraccio"
+QT_MOC_LITERAL(107, 14) // "envoyerDIFanuc"
 
     },
     "Superviseur\0recuperationDo\0\0lancerCycle\0"
-    "synchroniserRobot\0recupererDOFanuc\0"
-    "recupererDOBraccio\0envoyerDIFanuc"
+    "synchroniserRobot\0arreterCycle\0"
+    "recupererDOFanuc\0recupererDOBraccio\0"
+    "envoyerDIFanuc"
 };
 #undef QT_MOC_LITERAL
 
@@ -51,7 +53,7 @@ static const uint qt_meta_data_Superviseur[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -59,20 +61,22 @@ static const uint qt_meta_data_Superviseur[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   50,    2, 0x06,    1 /* Public */,
-       3,    0,   51,    2, 0x06,    2 /* Public */,
+       1,    0,   56,    2, 0x06,    1 /* Public */,
+       3,    0,   57,    2, 0x06,    2 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       4,    0,   52,    2, 0x0a,    3 /* Public */,
-       5,    0,   53,    2, 0x0a,    4 /* Public */,
-       6,    0,   54,    2, 0x0a,    5 /* Public */,
-       7,    0,   55,    2, 0x0a,    6 /* Public */,
+       4,    0,   58,    2, 0x0a,    3 /* Public */,
+       5,    0,   59,    2, 0x0a,    4 /* Public */,
+       6,    0,   60,    2, 0x0a,    5 /* Public */,
+       7,    0,   61,    2, 0x0a,    6 /* Public */,
+       8,    0,   62,    2, 0x0a,    7 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
     QMetaType::Void,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -90,9 +94,10 @@ void Superviseur::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: _t->recuperationDo(); break;
         case 1: _t->lancerCycle(); break;
         case 2: _t->synchroniserRobot(); break;
-        case 3: _t->recupererDOFanuc(); break;
-        case 4: _t->recupererDOBraccio(); break;
-        case 5: _t->envoyerDIFanuc(); break;
+        case 3: _t->arreterCycle(); break;
+        case 4: _t->recupererDOFanuc(); break;
+        case 5: _t->recupererDOBraccio(); break;
+        case 6: _t->envoyerDIFanuc(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -123,7 +128,7 @@ const QMetaObject Superviseur::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_Superviseur_t
 , QtPrivate::TypeAndForceComplete<Superviseur, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
 >,
@@ -150,13 +155,13 @@ int Superviseur::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }

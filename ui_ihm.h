@@ -44,6 +44,7 @@ public:
     QPushButton *pauseCycle;
     QLabel *label_12;
     QTextEdit *tESA;
+    QSpinBox *numeroCycle;
     QWidget *tab;
     QTextEdit *tEFanuc;
     QTextEdit *tEBraccio;
@@ -178,6 +179,12 @@ public:
         tESA->setFont(font1);
         tESA->setStyleSheet(QString::fromUtf8("color: black;\n"
 "background-color:#625a87;"));
+        numeroCycle = new QSpinBox(tab_3);
+        numeroCycle->setObjectName(QString::fromUtf8("numeroCycle"));
+        numeroCycle->setGeometry(QRect(310, 360, 71, 41));
+        numeroCycle->setFont(font);
+        numeroCycle->setStyleSheet(QString::fromUtf8("background-color: white;\n"
+"color: black;"));
         tabWidget->addTab(tab_3, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
