@@ -199,7 +199,6 @@ DIST          = ../../Qt/6.3.0/gcc_64/mkspecs/features/spec_pre.prf \
 		../../Qt/6.3.0/gcc_64/mkspecs/features/qt_config.prf \
 		../../Qt/6.3.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../Qt/6.3.0/gcc_64/mkspecs/features/spec_post.prf \
-		../API/.qmake.stash \
 		../../Qt/6.3.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../Qt/6.3.0/gcc_64/mkspecs/features/toolchain.prf \
 		../../Qt/6.3.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -371,7 +370,6 @@ Makefile: ../API/API.pro ../../Qt/6.3.0/gcc_64/mkspecs/linux-g++/qmake.conf ../.
 		../../Qt/6.3.0/gcc_64/mkspecs/features/qt_config.prf \
 		../../Qt/6.3.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../Qt/6.3.0/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		../../Qt/6.3.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../Qt/6.3.0/gcc_64/mkspecs/features/toolchain.prf \
 		../../Qt/6.3.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -522,7 +520,6 @@ Makefile: ../API/API.pro ../../Qt/6.3.0/gcc_64/mkspecs/linux-g++/qmake.conf ../.
 ../../Qt/6.3.0/gcc_64/mkspecs/features/qt_config.prf:
 ../../Qt/6.3.0/gcc_64/mkspecs/linux-g++/qmake.conf:
 ../../Qt/6.3.0/gcc_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 ../../Qt/6.3.0/gcc_64/mkspecs/features/exclusive_builds.prf:
 ../../Qt/6.3.0/gcc_64/mkspecs/features/toolchain.prf:
 ../../Qt/6.3.0/gcc_64/mkspecs/features/default_pre.prf:
@@ -850,6 +847,13 @@ moc_superviseur.cpp: ../API/Superviseur/superviseur.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qdeadlinetimer.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qelapsedtimer.h \
 		../API/Superviseur/Braccio/robotBraccio.h \
+		../API/Superviseur/Afficheur/afficheur2lignes.h \
+		../../Qt/6.3.0/gcc_64/include/QtWidgets/QWidget \
+		../../Qt/6.3.0/gcc_64/include/QtNetwork/QHostAddress \
+		../../Qt/6.3.0/gcc_64/include/QtCore/QDateTime \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qdatetime.h \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qcalendar.h \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qlocale.h \
 		moc_predefs.h \
 		../../Qt/6.3.0/gcc_64/libexec/moc
 	/home/felix/Qt/6.3.0/gcc_64/libexec/moc $(DEFINES) --include /home/felix/Bureau/build-API-Desktop_Qt_6_3_0_GCC_64bit-Debug/moc_predefs.h -I/home/felix/Qt/6.3.0/gcc_64/mkspecs/linux-g++ -I/home/felix/Bureau/API -I/home/felix/Qt/6.3.0/gcc_64/include -I/home/felix/Qt/6.3.0/gcc_64/include/QtWidgets -I/home/felix/Qt/6.3.0/gcc_64/include/QtGui -I/home/felix/Qt/6.3.0/gcc_64/include/QtNetwork -I/home/felix/Qt/6.3.0/gcc_64/include/QtCore -I. -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../API/Superviseur/superviseur.h -o moc_superviseur.cpp
@@ -1010,6 +1014,13 @@ moc_ihm.cpp: ../API/ihm.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qdeadlinetimer.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qelapsedtimer.h \
 		../API/Superviseur/Braccio/robotBraccio.h \
+		../API/Superviseur/Afficheur/afficheur2lignes.h \
+		../../Qt/6.3.0/gcc_64/include/QtWidgets/QWidget \
+		../../Qt/6.3.0/gcc_64/include/QtNetwork/QHostAddress \
+		../../Qt/6.3.0/gcc_64/include/QtCore/QDateTime \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qdatetime.h \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qcalendar.h \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qlocale.h \
 		../../Qt/6.3.0/gcc_64/include/QtWidgets/QTextEdit \
 		../../Qt/6.3.0/gcc_64/include/QtWidgets/qtextedit.h \
 		../../Qt/6.3.0/gcc_64/include/QtWidgets/qabstractscrollarea.h \
@@ -1203,6 +1214,7 @@ afficheur2lignes.o: ../API/Superviseur/Afficheur/afficheur2lignes.cpp ../API/Sup
 		../../Qt/6.3.0/gcc_64/include/QtCore/qdatetime.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qcalendar.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qlocale.h \
+		../API/Superviseur/EsclaveModBusTCP/esclavemodbustcp.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o afficheur2lignes.o ../API/Superviseur/Afficheur/afficheur2lignes.cpp
 
@@ -1879,7 +1891,14 @@ superviseur.o: ../API/Superviseur/superviseur.cpp ../API/Superviseur/superviseur
 		../../Qt/6.3.0/gcc_64/include/QtCore/qthread.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qdeadlinetimer.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qelapsedtimer.h \
-		../API/Superviseur/Braccio/robotBraccio.h
+		../API/Superviseur/Braccio/robotBraccio.h \
+		../API/Superviseur/Afficheur/afficheur2lignes.h \
+		../../Qt/6.3.0/gcc_64/include/QtWidgets/QWidget \
+		../../Qt/6.3.0/gcc_64/include/QtNetwork/QHostAddress \
+		../../Qt/6.3.0/gcc_64/include/QtCore/QDateTime \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qdatetime.h \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qcalendar.h \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qlocale.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o superviseur.o ../API/Superviseur/superviseur.cpp
 
 main.o: ../API/main.cpp ../API/ihm.h \
@@ -2038,6 +2057,13 @@ main.o: ../API/main.cpp ../API/ihm.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qdeadlinetimer.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qelapsedtimer.h \
 		../API/Superviseur/Braccio/robotBraccio.h \
+		../API/Superviseur/Afficheur/afficheur2lignes.h \
+		../../Qt/6.3.0/gcc_64/include/QtWidgets/QWidget \
+		../../Qt/6.3.0/gcc_64/include/QtNetwork/QHostAddress \
+		../../Qt/6.3.0/gcc_64/include/QtCore/QDateTime \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qdatetime.h \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qcalendar.h \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qlocale.h \
 		../../Qt/6.3.0/gcc_64/include/QtWidgets/QTextEdit \
 		../../Qt/6.3.0/gcc_64/include/QtWidgets/qtextedit.h \
 		../../Qt/6.3.0/gcc_64/include/QtWidgets/qabstractscrollarea.h \
@@ -2071,7 +2097,6 @@ main.o: ../API/main.cpp ../API/ihm.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qpromise.h \
 		../../Qt/6.3.0/gcc_64/include/QtGui/qguiapplication.h \
 		../../Qt/6.3.0/gcc_64/include/QtGui/qinputmethod.h \
-		../../Qt/6.3.0/gcc_64/include/QtCore/qlocale.h \
 		../../Qt/6.3.0/gcc_64/include/QtGui/qguiapplication_platform.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../API/main.cpp
 
@@ -2231,6 +2256,13 @@ ihm.o: ../API/ihm.cpp ../API/ihm.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qdeadlinetimer.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qelapsedtimer.h \
 		../API/Superviseur/Braccio/robotBraccio.h \
+		../API/Superviseur/Afficheur/afficheur2lignes.h \
+		../../Qt/6.3.0/gcc_64/include/QtWidgets/QWidget \
+		../../Qt/6.3.0/gcc_64/include/QtNetwork/QHostAddress \
+		../../Qt/6.3.0/gcc_64/include/QtCore/QDateTime \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qdatetime.h \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qcalendar.h \
+		../../Qt/6.3.0/gcc_64/include/QtCore/qlocale.h \
 		../../Qt/6.3.0/gcc_64/include/QtWidgets/QTextEdit \
 		../../Qt/6.3.0/gcc_64/include/QtWidgets/qtextedit.h \
 		../../Qt/6.3.0/gcc_64/include/QtWidgets/qabstractscrollarea.h \
@@ -2249,8 +2281,6 @@ ihm.o: ../API/ihm.cpp ../API/ihm.h \
 		../../Qt/6.3.0/gcc_64/include/QtWidgets/qlabel.h \
 		../../Qt/6.3.0/gcc_64/include/QtGui/qpicture.h \
 		ui_ihm.h \
-		../../Qt/6.3.0/gcc_64/include/QtCore/QVariant \
-		../../Qt/6.3.0/gcc_64/include/QtGui/QAction \
 		../../Qt/6.3.0/gcc_64/include/QtWidgets/QApplication \
 		../../Qt/6.3.0/gcc_64/include/QtWidgets/qapplication.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qcoreapplication.h \
@@ -2267,22 +2297,7 @@ ihm.o: ../API/ihm.cpp ../API/ihm.h \
 		../../Qt/6.3.0/gcc_64/include/QtCore/qpromise.h \
 		../../Qt/6.3.0/gcc_64/include/QtGui/qguiapplication.h \
 		../../Qt/6.3.0/gcc_64/include/QtGui/qinputmethod.h \
-		../../Qt/6.3.0/gcc_64/include/QtCore/qlocale.h \
-		../../Qt/6.3.0/gcc_64/include/QtGui/qguiapplication_platform.h \
-		../../Qt/6.3.0/gcc_64/include/QtWidgets/QPushButton \
-		../../Qt/6.3.0/gcc_64/include/QtWidgets/qpushbutton.h \
-		../../Qt/6.3.0/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../Qt/6.3.0/gcc_64/include/QtWidgets/QSpinBox \
-		../../Qt/6.3.0/gcc_64/include/QtWidgets/qspinbox.h \
-		../../Qt/6.3.0/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		../../Qt/6.3.0/gcc_64/include/QtGui/qvalidator.h \
-		../../Qt/6.3.0/gcc_64/include/QtCore/qregularexpression.h \
-		../../Qt/6.3.0/gcc_64/include/QtWidgets/QStatusBar \
-		../../Qt/6.3.0/gcc_64/include/QtWidgets/qstatusbar.h \
-		../../Qt/6.3.0/gcc_64/include/QtWidgets/QTabWidget \
-		../../Qt/6.3.0/gcc_64/include/QtWidgets/QToolBar \
-		../../Qt/6.3.0/gcc_64/include/QtWidgets/qtoolbar.h \
-		../../Qt/6.3.0/gcc_64/include/QtWidgets/QWidget
+		../../Qt/6.3.0/gcc_64/include/QtGui/qguiapplication_platform.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ihm.o ../API/ihm.cpp
 
 moc_convoyeur.o: moc_convoyeur.cpp 
