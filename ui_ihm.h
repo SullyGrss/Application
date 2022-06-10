@@ -45,6 +45,7 @@ public:
     QLabel *label_12;
     QTextEdit *tESA;
     QSpinBox *numeroCycle;
+    QLabel *label_13;
     QWidget *tab;
     QTextEdit *tEFanuc;
     QTextEdit *tEBraccio;
@@ -82,7 +83,7 @@ public:
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setEnabled(true);
-        tabWidget->setGeometry(QRect(20, 30, 1261, 591));
+        tabWidget->setGeometry(QRect(20, 40, 1261, 591));
         tabWidget->setAcceptDrops(true);
         tabWidget->setStyleSheet(QString::fromUtf8("background-color: #0070FF;\n"
 "opacity: 1;\n"
@@ -139,7 +140,7 @@ public:
         startCycle = new QPushButton(tab_3);
         startCycle->setObjectName(QString::fromUtf8("startCycle"));
         startCycle->setEnabled(false);
-        startCycle->setGeometry(QRect(430, 180, 181, 61));
+        startCycle->setGeometry(QRect(570, 150, 181, 61));
         startCycle->setFont(font);
         startCycle->setStyleSheet(QString::fromUtf8("opacity: 1;\n"
 "color: black;\n"
@@ -147,7 +148,7 @@ public:
         stopCycle = new QPushButton(tab_3);
         stopCycle->setObjectName(QString::fromUtf8("stopCycle"));
         stopCycle->setEnabled(true);
-        stopCycle->setGeometry(QRect(430, 270, 171, 61));
+        stopCycle->setGeometry(QRect(570, 330, 171, 61));
         stopCycle->setFont(font);
         stopCycle->setStyleSheet(QString::fromUtf8("opacity: 1;\n"
 "color: black;\n"
@@ -163,7 +164,7 @@ public:
         pauseCycle = new QPushButton(tab_3);
         pauseCycle->setObjectName(QString::fromUtf8("pauseCycle"));
         pauseCycle->setEnabled(true);
-        pauseCycle->setGeometry(QRect(640, 230, 171, 61));
+        pauseCycle->setGeometry(QRect(570, 240, 171, 61));
         pauseCycle->setFont(font);
         pauseCycle->setStyleSheet(QString::fromUtf8("opacity: 1;\n"
 "color: black;\n"
@@ -185,6 +186,10 @@ public:
         numeroCycle->setFont(font);
         numeroCycle->setStyleSheet(QString::fromUtf8("background-color: white;\n"
 "color: black;"));
+        label_13 = new QLabel(tab_3);
+        label_13->setObjectName(QString::fromUtf8("label_13"));
+        label_13->setGeometry(QRect(280, 340, 141, 16));
+        label_13->setStyleSheet(QString::fromUtf8("color:white;"));
         tabWidget->addTab(tab_3, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
@@ -335,6 +340,7 @@ public:
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans'; font-size:28pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:37px; margin-bottom:37px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Sans Serif'; font-size:16pt;\">DECONNECTE</span></p></body></html>", nullptr));
+        label_13->setText(QCoreApplication::translate("IHM", "Num\303\251ro de sauvegarde", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("IHM", "Tableau de bord", nullptr));
         tEFanuc->setHtml(QCoreApplication::translate("IHM", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
